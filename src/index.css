@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Bebas Neue", ui-sans-serif, system-ui, sans-serif;
+  --font-alt: "Oswald", ui-sans-serif, system-ui, sans-serif;
+  
+  /* Ritual Tattoo Brand Colors */
+  --color-brand-red: #C5A059; /* Overridden to Gold/Bronze to match identity while keeping class names intact */
+  --color-brand-gold: #D4AF37;
+  --color-brand-dark: #0A0A0A;
+  --color-brand-gray: #1A1A1A;
+}
+
+@layer base {
+  body {
+    @apply bg-brand-dark text-white font-sans;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display tracking-wide;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
